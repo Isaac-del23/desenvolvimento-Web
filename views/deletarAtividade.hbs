@@ -1,0 +1,6 @@
+<h1>Deletar Atividade</h1>
+  <p>Tem certeza que deseja deletar a atividade "{{atividade.titulo}}"?</p>
+  <form method="POST" action="/atividades/{{atividade.id}}">
+    <button type="submit">Sim, deletar</button>
+    <a href="/">Não, voltar para a lista de atividades</a>
+  </form>

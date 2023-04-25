@@ -1,0 +1,19 @@
+<h1>Nova Atividade</h1>
+<form method="POST" action="/atividades">
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" name="titulo" required>
+  <br>
+  <label for="descricao">Descrição:</label>
+  <textarea id="descricao" name="descricao" required></textarea>
+  <br>
+  <label for="prioridade">Prioridade:</label>
+  <select id="prioridade" name="prioridade" required>
+    <option value="">Selecione uma opção</option>
+    <option value="Alta">Alta</option>
+    <option value="Média">Média</option>
+    <option value="Baixa">Baixa</option>
+  </select>
+  <br>
+  <button type="submit" name="submit">Criar Atividade</button>
+</form>
+<a href="/">Voltar</a>

@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Prioridade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each atividades}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.titulo}}</td>
+        <td>{{this.prioridade}}</td>
+        <td>
+          <a href="/atividades/{{this.id}}/exibeAtividade" title="Show">Mostrar</a> |
+          <a href="/atividades/{{this.id}}/editaAtividade" title="Edit">Editar</a> |
+       <form method="POST" action="/atividades/{{this.id}}?_method=DELETE" style="display: inline;">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" title="Delete" onclick="return confirm('Are you sure?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

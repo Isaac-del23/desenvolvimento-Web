@@ -1,0 +1,18 @@
+<h1>Editar Atividade</h1>
+  <form method="POST" action="/atividades/{{atividade.id}}">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" value="{{atividade.titulo}}" required>
+    <br>
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required>{{atividade.descricao}}</textarea>
+    <br>
+    <label for="prioridade">Prioridade:</label>
+    <select id="prioridade" name="prioridade" required>
+      <option value="">Selecione uma opção</option>
+      <option value="Alta"{{#ifEqual atividade.prioridade "Alta"}} selected{{/ifEqual}}>Alta</option>
+      <option value="Média"{{#ifEqual atividade.prioridade "Média"}} selected{{/ifEqual}}>Média</option>
+      <option value="Baixa"{{#ifEqual atividade.prioridade "Baixa"}} selected{{/ifEqual}}>Baixa</option>
+    </select>
+    <br>
+    <button type="submit">Atualizar Atividade</button>
+  </form>
